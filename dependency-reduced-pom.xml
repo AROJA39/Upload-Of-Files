@@ -3,11 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.co.fileupload</groupId>
   <artifactId>MSUploadOfFields</artifactId>
-  <name>Upload of files</name>
-  <version>0.0.1-SNAPSHOT</version>
-  <description>Micro Service Upload of files</description>
+  <name>MSUploadOfFiles</name>
+  <version>0.0.1</version>
   <build>
-    <finalName>MSUploadOfFiles</finalName>
+    <finalName>${project.artifactId}_${project.version}</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
@@ -19,7 +18,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <outputFile>dist\${project.artifactId}.jar</outputFile>
+              <outputFile>${project.artifactId}_${project.version}.jar</outputFile>
               <transformers>
                 <transformer>
                   <mainClass>co.com.msuploadoffiles.MsUploadOfFilesApplication</mainClass>

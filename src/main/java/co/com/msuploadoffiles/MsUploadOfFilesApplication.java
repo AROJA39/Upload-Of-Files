@@ -7,7 +7,7 @@ import io.javalin.Javalin;
 public class MsUploadOfFilesApplication {
 
 	public static void main(String[] args) {
-		Javalin app = Javalin.create().start(Constants.SERVER_PORT);
+		Javalin app = Javalin.create().start(8086);//Constants.SERVER_PORT
 		app.get("/get", new get());
 	}
 
